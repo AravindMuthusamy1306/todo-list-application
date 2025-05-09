@@ -19,7 +19,7 @@ function App() {
     setTodoList(todoList.filter((task) => task.id !== id))
   }
   const completeTask = (id) =>{
-    setTodoList(todoList.map((task) => task.id === id ? {...task, completed : !task.completed } : task))
+    setTodoList(todoList.map((task) => task.id === id ? {...task, completed: !task.completed} : task))
   }
   return(
       <div className="App">
@@ -29,14 +29,14 @@ function App() {
         </div>
         <div className="taskList">
           {
-            todoList.map((task, index) =>{
+            todoList.map((task) =>{
               return(
-                <div key={task.id} style={{backgroundColor : task.completed ? "green" : "none" }}>
-                  {task.taskName}
-                  <button onClick= {() => completeTask(task.id)}> Completed </button>
-                  <button onClick={()=>deleteTask(task.id)}> X </button>
-                </div>
-              )
+            <div key={task.id} style={{backgroundColor : task.completed ? "green" : "none" }}>
+              <h1>{task.taskName}</h1>   
+              <button onClick= {() => completeTask(task.id)}> Completed </button>
+              <button onClick={() => deleteTask(task.id)}> X </button>
+            </div>
+          )
             } )
           }
         </div>
