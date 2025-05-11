@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { Task } from './Task'; // ✅ Import the new component
+import { Task } from './Task';
 
 function App() {
   const [todoList, setTodoList] = useState([]);
